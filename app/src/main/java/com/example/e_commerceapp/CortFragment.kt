@@ -11,14 +11,25 @@ import com.example.e_commerceapp.databinding.FragmentCortBinding
 
 class CortFragment :Fragment() {
 
+    private var _binding: FragmentCortBinding? = null
+    private val binding get() = _binding!!
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-     val binding  = FragmentCortBinding.inflate(
+        _binding  = FragmentCortBinding.inflate(
             inflater, container, false
         )
         return binding.root
     }
+
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
+
 }
