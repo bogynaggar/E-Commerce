@@ -10,8 +10,6 @@
         android:name="com.example.e_commerceapp.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home"/>
-
-
     <fragment
         android:id="@+id/navigation_search"
         android:name="com.example.e_commerceapp.SearchFragment"
