@@ -19,14 +19,17 @@ class ProfileFragment :Fragment(){
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentProfileBinding.inflate(
-            inflater , container , false)
+        _binding = FragmentProfileBinding.inflate( inflater , container , false)
 
         binding.profileSection.setOnClickListener {
             val intent = Intent(context , User_profile::class.java)
             startActivity(intent)
         }
 
+        binding.settingSection.setOnClickListener {
+            val intent = Intent(context , SettingActivity::class.java)
+            startActivity(intent)
+        }
 
         binding.shareSection.setOnClickListener {
             val sendIntent: Intent = Intent().apply {
@@ -38,7 +41,6 @@ class ProfileFragment :Fragment(){
             val shareIntent = Intent.createChooser(sendIntent, null)
             startActivity(shareIntent)
         }
-
 
 
 

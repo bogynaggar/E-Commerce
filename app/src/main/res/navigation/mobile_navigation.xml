@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@id/navigation_profile">
 
     <fragment
         android:id="@+id/navigation_home"
@@ -26,6 +26,23 @@
         android:id="@+id/navigation_profile"
         android:name="com.example.e_commerceapp.ProfileFragment"
         android:label="@string/title_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_navigation_profile_to_settingActivity"
+            app:destination="@id/settingActivity"
+            app:enterAnim="@android:anim/bounce_interpolator"
+            app:exitAnim="@android:anim/cycle_interpolator" />
+    </fragment>
+    <activity
+        android:id="@+id/settingActivity"
+        android:name="com.example.e_commerceapp.SettingActivity"
+        android:label="activity_setting"
+        tools:layout="@layout/activity_setting" />
+
+    <activity
+        android:id="@+id/user_profile"
+        android:name="com.example.e_commerceapp.User_profile"
+        android:label="activity_user_profile"
+        tools:layout="@layout/activity_user_profile" />
 
 </navigation>

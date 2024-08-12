@@ -4,48 +4,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileFragment">
+    tools:context=".SettingActivity">
+
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/profileIMage"
-        android:layout_height="80dp"
-        android:layout_width="80dp"
-        app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
-        app:strokeColor="@color/black"
+        android:id="@+id/backArrow"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/arrow_back_circle"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/profile_image"
-        app:strokeWidth="1dp"
-    />
+        />
 
     <TextView
-        android:id="@+id/profileName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="@string/mostafa_el_naggar"
-        android:textColor="@color/material_dynamic_secondary50"
+        android:text="@string/title_setting"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/profileEmail"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        android:textColor="@color/arrowBlack"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/profileIMage" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="35dp"
+
+        />
 
     <TextView
-        android:id="@+id/profileEmail"
+        android:id="@+id/textAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="50dp"
-        android:text="@string/email"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/title_account"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="@color/arrowBlack"
+        app:layout_constraintTop_toBottomOf="@id/backArrow"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/profileName"
-        app:layout_constraintBottom_toTopOf="@id/profileSection"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+
         />
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -54,20 +53,106 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rectangle_shape"
+        android:padding="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textAccount"
+        >
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profileIMage"
+            android:layout_height="60dp"
+            android:layout_width="60dp"
+            app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
+            app:strokeColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/profile_image"
+
+            />
+
+        <TextView
+            android:id="@+id/textName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:backgroundTint="@color/material_dynamic_primary20"
+            android:text="@string/mostafa_el_naggar"
+            android:textColor="@color/material_dynamic_primary20"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/profileIMage"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+        <TextView
+            android:id="@+id/texteEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textSize="12sp"
+            android:text="@string/email"
+            app:layout_constraintStart_toStartOf="@id/textName"
+            app:layout_constraintTop_toBottomOf="@id/textName"
+            />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/arrow_right_24"
+            android:backgroundTint="@color/material_dynamic_primary20"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profileSection"
+        android:background="@color/arrowBlack"
+        android:layout_margin="20dp"
+        />
+
+    <TextView
+        android:id="@+id/textSetting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_setting"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="@color/arrowBlack"
+        app:layout_constraintTop_toBottomOf="@id/line"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/notificationSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
         android:background="@drawable/rectangle_shape"
         android:orientation="horizontal"
         android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/profileEmail"
+        app:layout_constraintTop_toBottomOf="@id/textSetting"
         >
 
         <ImageView
             android:id="@+id/layoutImage"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:background="@drawable/profilenew"
+            android:background="@drawable/notification"
             android:backgroundTint="@color/material_dynamic_primary20"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -81,7 +166,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:backgroundTint="@color/material_dynamic_primary20"
-            android:text="@string/title_profile"
+            android:text="@string/title_notification"
             android:textColor="@color/material_dynamic_primary20"
             android:textSize="17sp"
             android:textStyle="bold"
@@ -103,13 +188,13 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/settingSection"
+        android:id="@+id/languageSection"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/rectangle_shape"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/profileSection"
+        app:layout_constraintTop_toBottomOf="@id/notificationSection"
         android:orientation="horizontal"
         android:layout_margin="20dp"
         android:padding="10dp"
@@ -120,7 +205,7 @@
             android:id="@+id/layoutImage2"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:background="@drawable/setting"
+            android:background="@drawable/language"
             android:backgroundTint="@color/material_dynamic_primary20"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -129,10 +214,10 @@
             />
 
         <TextView
-            android:id="@+id/layoutText2"
+            android:id="@+id/layoutText21"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/title_setting"
+            android:text="@string/title_language"
             android:backgroundTint="@color/material_dynamic_primary20"
             app:layout_constraintStart_toEndOf="@id/layoutImage2"
             app:layout_constraintTop_toTopOf="parent"
@@ -144,7 +229,24 @@
 
             />
 
+        <TextView
+            android:id="@+id/selectedLanguage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_selectedLanguage"
+            android:backgroundTint="@color/material_dynamic_primary20"
+            app:layout_constraintEnd_toStartOf="@id/backArrow2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="30dp"
+            android:textStyle="bold"
+            android:textColor="@color/material_dynamic_primary20"
+            android:textSize="14sp"
+
+            />
+
         <ImageView
+            android:id="@+id/backArrow2"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:background="@drawable/arrow_right_24"
@@ -157,13 +259,13 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/contactSection"
+        android:id="@+id/privacySection"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/rectangle_shape"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/settingSection"
+        app:layout_constraintTop_toBottomOf="@id/languageSection"
         android:orientation="horizontal"
         android:layout_margin="20dp"
         android:padding="10dp"
@@ -174,7 +276,7 @@
             android:id="@+id/layoutImage3"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:background="@drawable/contact"
+            android:background="@drawable/privacy"
             android:backgroundTint="@color/material_dynamic_primary20"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -186,7 +288,7 @@
             android:id="@+id/layoutText3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/title_contact"
+            android:text="@string/title_privacy"
             android:backgroundTint="@color/material_dynamic_primary20"
             app:layout_constraintStart_toEndOf="@id/layoutImage3"
             app:layout_constraintTop_toTopOf="parent"
@@ -211,13 +313,13 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/shareSection"
+        android:id="@+id/helpCenterSection"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/rectangle_shape"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/contactSection"
+        app:layout_constraintTop_toBottomOf="@id/privacySection"
         android:orientation="horizontal"
         android:layout_margin="20dp"
         android:padding="10dp"
@@ -228,7 +330,7 @@
             android:id="@+id/layoutImage4"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:background="@drawable/share"
+            android:background="@drawable/helpcenter"
             android:backgroundTint="@color/material_dynamic_primary20"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -240,7 +342,7 @@
             android:id="@+id/layoutText4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/title_share"
+            android:text="@string/title_helpCenter"
             android:backgroundTint="@color/material_dynamic_primary20"
             app:layout_constraintStart_toEndOf="@id/layoutImage4"
             app:layout_constraintTop_toTopOf="parent"
@@ -265,13 +367,13 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/helpSection"
+        android:id="@+id/aboutSection"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/rectangle_shape"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/shareSection"
+        app:layout_constraintTop_toBottomOf="@id/helpCenterSection"
         android:orientation="horizontal"
         android:layout_margin="20dp"
         android:padding="10dp"
@@ -282,7 +384,7 @@
             android:id="@+id/layoutImage5"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:background="@drawable/help"
+            android:background="@drawable/aboutus"
             android:backgroundTint="@color/material_dynamic_primary20"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -294,7 +396,7 @@
             android:id="@+id/layoutText5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/title_help"
+            android:text="@string/title_aboutUs"
             android:backgroundTint="@color/material_dynamic_primary20"
             app:layout_constraintStart_toEndOf="@id/layoutImage5"
             app:layout_constraintTop_toTopOf="parent"
@@ -318,17 +420,5 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/sign_out"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="@color/orange"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="40dp"
-        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
