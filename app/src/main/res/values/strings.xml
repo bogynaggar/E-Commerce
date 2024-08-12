@@ -10,4 +10,8 @@
     <string name="mostafa_el_naggar">Mostafa El-Naggar</string>
     <string name="email">bogynaggar@gmail.com</string>
     <string name="title_setting">Setting</string>
+    <string name="title_contact">Contact</string>
+    <string name="title_share">Share App</string>
+    <string name="title_help">Help</string>
+    <string name="sign_out">Sign Out</string>
 </resources>
