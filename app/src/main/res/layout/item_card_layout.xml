@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="170dp"
+    android:layout_height="190dp"
+    app:cardBackgroundColor="@color/sectionGray"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp"
+    app:cardMaxElevation="10dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/item_Image"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginBottom="10dp"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/item_img"
+            android:scaleType="centerCrop"
+            />
+
+        <TextView
+            android:id="@+id/item_Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/item_Image"
+            android:text="@string/item_name"
+            android:textColor="@color/material_dynamic_neutral30"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/item_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/item_Name"
+            app:layout_constraintEnd_toStartOf="@id/item_priceLE"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="@string/item_price"
+            android:textColor="@color/material_dynamic_primary70"
+            />
+
+        <TextView
+            android:id="@+id/item_priceLE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/item_price"
+            app:layout_constraintTop_toBottomOf="@id/item_Name"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:text="@string/item_price_LE"
+            android:textColor="@color/material_dynamic_primary70"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

@@ -9,6 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="red">#B00020</color>
     <color name="orange">#FF5722</color>
-    <color name="sectionGray">#E3E3E3</color>
+    <color name="sectionGray">#F8F7F9</color>
     <color name="arrowBlack">#FF000000</color>
 </resources>

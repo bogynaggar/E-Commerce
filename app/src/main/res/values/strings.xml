@@ -21,4 +21,11 @@
     <string name="title_privacy">Privacy</string>
     <string name="title_helpCenter">Help Center</string>
     <string name="title_aboutUs">About us</string>
+    <string name="hello">Hello</string>
+    <string name="featured">Featured</string>
+    <string name="See_all">See all</string>
+    <string name="item_name">Item name</string>
+    <string name="item_price">40</string>
+    <string name="item_price_LE">LE</string>
+    <string name="most_popular">Most Popular</string>
 </resources>
